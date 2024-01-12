@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --white: hsl(0, 0%, 100%);
+  --s-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+}
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+/* input[type="number"] {
+  -moz-appearance: textfield;
+} */
+body {
+  max-width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-grayish-cyan);
+  font-family: "Space Mono", monospace;
+}
+main {
+  max-width: 57rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .logo {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.cal-part {
+  background-color: var(--white);
+  padding: 1.7rem;
+  display: flex;
+  border-radius: 1rem;
+}
+div.tip-am > * {
+  display: block;
+}
+div.label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+label {
+  color: var(--dark-grayish-cyan);
+}
+small {
+  color: red;
+}
+
+form {
+  max-width: 50%;
+  padding: 1rem;
+}
+.bill {
+  margin-bottom: 1rem;
+}
+.bill label {
+  margin-bottom: 5px;
+}
+.tip-am {
+  margin: 1.5rem 0;
+}
+.tip-am label {
+  margin-bottom: 0.86rem;
+}
+.no-peple label {
+  margin-bottom: 5px;
+}
+.input {
+  position: relative;
+}
+.input input {
+  outline: none;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: end;
+  font-family: "Space Mono", monospace;
+  padding: 0.43rem 0.45rem 0.43rem 1.5rem;
+  background-color: var(--Very-light-grayish-cyan);
+  border-radius: 0.3rem;
+  color: var(--very-dark-cyan);
+}
+.input i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.7rem;
+  color: var(--grayish-cyan);
+}
+i.fa-dollar-sign {
+  font-family: "Space Mono", monospace;
+  padding: 0.85rem 0.25rem;
+}
+i.fa-user {
+  font-size: 1.2rem;
+  padding: 1.1rem 0.4rem;
+}
+.input input::placeholder {
+  font-family: "Space Mono", monospace;
+  text-align: end;
+  font-size: 24px;
+  color: var(--grayish-cyan);
+}
+.persent {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.persent > * {
+  font-family: "Space Mono", monospace;
+}
+.persent button {
+  flex-grow: 4;
+  font-size: 1.5rem;
+  width: 7.8rem;
+  padding: 0.5rem 0;
+  outline: none;
+  border: none;
+  margin-bottom: 0.5rem;
+  border-radius: 0.2rem;
+  color: var(--Very-light-grayish-cyan);
+  cursor: pointer;
+}
+button.btn {
+  background-color: var(--very-dark-cyan);
+}
+
+.persent input {
+  font-size: 1.5rem;
+  width: 7.8rem;
+  padding: 0.4rem;
+  background-color: var(--Very-light-grayish-cyan);
+  border-radius: 0.2rem;
+  outline: none;
+  text-align: end;
+  color: var(--very-dark-cyan);
+}
+
+.displayer {
+  background-color: var(--very-dark-cyan);
+  width: 50%;
+  padding: 1.4rem 2rem;
+  margin-left: 0.6rem;
+  position: relative;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.displayer .results > * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.result {
+  padding: 0.89rem 0;
+}
+.result > strong {
+  font-size: 40px;
+  color: var(--s-cyan);
+}
+.result div > * {
+  display: block;
+}
+.result div strong {
+  color: var(--light-grayish-cyan);
+}
+.result div span {
+  color: var(--dark-grayish-cyan);
+}
+.foc {
+  border: 2px solid var(--white);
+}
+.err {
+  border: 2px solid red;
+}
+.foc:focus {
+  border: 2px solid var(--s-cyan);
+}
+.err:focus {
+  border: 2px solid red;
+}
+.displayer button {
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--s-cyan);
+  border-radius: 0.2rem;
+  margin-top: 4rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--very-dark-cyan);
+  font-family: "Space Mono", monospace;
+}
+button:hover {
+  background-color: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+}
+.clicked {
+  background-color: var(--s-cyan);
+}
+@media screen and (max-width: 420px) {
+  .cal-part {
+    display: block;
+  }
+  form {
+    max-width: 100%;
+  }
+  .displayer {
+    width: 100%;
+  }
+}
